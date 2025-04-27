@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Logo className="h-12 w-auto mb-4" isWhite />
             <p className="text-sm text-gray-300 mb-4">
-              Making dog breed research fun and engaging
+              Compare a breed. Rescue a friend.
             </p>
               <a href="x.com/K9Kompare17667" className="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
