@@ -75,7 +75,7 @@ const Navbar = () => {
                   to={link.to}
                   className={({ isActive }) => 
                     `nav-link ${isActive ? 'nav-link-active' : ''} ${
-                      scrolled ? 'text-gray-700' : 'text-white'
+                      scrolled ? 'text-black-100' : 'text-white'
                     }`
                   }
                 >
@@ -149,7 +149,7 @@ const Navbar = () => {
                     key={link.to}
                     to={link.to}
                     className={({ isActive }) => 
-                      `nav-link block text-gray-700 ${isActive ? 'nav-link-active' : ''}`
+                      `nav-link block text-black-100 ${isActive ? 'nav-link-active' : ''}`
                     }
                   >
                     {link.label}
@@ -173,7 +173,7 @@ const Navbar = () => {
                         signOut();
                         setMobileMenuOpen(false);
                       }}
-                      className="text-gray-700 hover:text-secondary-500 transition-colors"
+                      className="text-black-100 hover:text-secondary-500 transition-colors"
                     >
                       Sign Out
                     </button>
@@ -184,7 +184,7 @@ const Navbar = () => {
                       setMobileMenuOpen(false);
                       setAuthModalOpen(true);
                     }}
-                    className="text-gray-700 hover:text-secondary-500 transition-colors flex items-center gap-2"
+                    className="text-black-100 hover:text-secondary-500 transition-colors flex items-center gap-2"
                   >
                     <LogIn size={20} />
                     Sign In
