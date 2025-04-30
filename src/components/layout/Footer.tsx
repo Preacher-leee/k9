@@ -36,10 +36,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Dog Care Tips</a></li>
+              <li><a href="https://www.aspca.org/pet-care/dog-care/general-dog-care" className="text-gray-300 hover:text-white transition-colors">Dog Care Tips</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Breed Health</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Training Resources</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Adoption Info</a></li>
+              <li><a href="https://www.akc.org/products-services/training-programs/canine-good-citizen/training-resources/" className="text-gray-300 hover:text-white transition-colors">Training Resources</a></li>
+              <li><a href="https://www.spcaflorida.org/adoptioninfo" className="text-gray-300 hover:text-white transition-colors">Adoption Info</a></li>
             </ul>
           </div>
 
@@ -54,9 +54,9 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-gray-400">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; {currentYear} K9Kompare.com. All rights reserved.</p>
+            <p>&copy; {currentYear} TLee Apps | K9Kompare.com. All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="https://www.freeprivacypolicy.com/live/8b8c81cb-e3d6-4c66-a68a-80274a1d783d" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
               <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
             </div>
