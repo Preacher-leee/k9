@@ -12,12 +12,13 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Logo className="h-12 w-auto mb-4" isWhite />
             <p className="text-sm text-gray-300 mb-4">
-              Compare a breed. Rescue a friend.
+              Compare a bread. Rescue a friend.
             </p>
-              <a href="x.com/K9Kompare17667" className="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
+            <div className="flex space-x-4">
+              <a href="https://www.x.com/k9mpare" className="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="https://www.instagram.com/K9mpare" className="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/k9mpare" className="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>
@@ -37,8 +38,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-2">
               <li><a href="https://www.aspca.org/pet-care/dog-care/general-dog-care" className="text-gray-300 hover:text-white transition-colors">Dog Care Tips</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Breed Health</a></li>
-              <li><a href="https://www.akc.org/products-services/training-programs/canine-good-citizen/training-resources/" className="text-gray-300 hover:text-white transition-colors">Training Resources</a></li>
+              <li><a href="https://womensanimalcenter.org/our-training-programs/dog-behavior-resources" className="text-gray-300 hover:text-white transition-colors">Training Resources</a></li>
               <li><a href="https://www.spcaflorida.org/adoptioninfo" className="text-gray-300 hover:text-white transition-colors">Adoption Info</a></li>
             </ul>
           </div>
@@ -46,22 +46,23 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Newsletter</h3>
             <p className="text-sm text-gray-300 mb-4">
-              Subscribe to our weekly newsletter
+              Subscribe to our weekly newsletter.
             </p>
-            <Link to="/newsletter" className="btn btn-secondary inline-block">Subscribe Now</Link>
+            <Link to="/newsletter" className="btn btn-secondary inline-block">Subscribe Now!</Link>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-gray-400">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; {currentYear} TLee Apps | K9Kompare.com. All rights reserved.</p>
+            <p>&copy; {currentYear} TLee Apps | K9Kompare.com - All rights reserved.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <a href="https://www.freeprivacypolicy.com/live/8b8c81cb-e3d6-4c66-a68a-80274a1d783d" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+              <a href="https://www.termsfeed.com/live/f7885e6c-d04a-4f66-b6e6-bfd4b5530cec" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="https://www.termsfeed.com/live/f7854bbc-cb72-41dd-b2f3-263b1dd613e5" className="hover:text-white transition-colors">Terms of Use</a>
+              <a href="https://www.termsfeed.com/live/68a4f8b0-9e4c-478c-87f4-ef5e919b45df" className="hover:text-white transition-colors">Cookie Policy</a>
             </div>
           </div>
         </div>
+      </div>
     </footer>
   );
 };
