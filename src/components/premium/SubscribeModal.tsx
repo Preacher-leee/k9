@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { X } from 'lucide-react';
+import { redirectToCheckout } from '../../services/stripe';
 
 interface SubscribeModalProps {
   isOpen: boolean;
@@ -6,6 +8,22 @@ interface SubscribeModalProps {
 }
 
 export const SubscribeModal = ({ isOpen, onClose }: SubscribeModalProps) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubscribe = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      await redirectToCheckout('K9_KOMPARE');
+    } catch (err) {
+      setError('Failed to initiate checkout. Please try again.');
+      console.error('Checkout error:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -64,9 +82,32 @@ export const SubscribeModal = ({ isOpen, onClose }: SubscribeModalProps) => {
           </ul>
         </div>
 
+        {error && (
+          <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+            <div className="flex">
+              <div className="ml-3">
+                <p className="text-sm text-red-700">{error}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="text-center">
-          <button className="btn btn-primary w-full mb-4">
-            Subscribe Now - $4.99/month
+          <button 
+            className="btn btn-primary w-full mb-4 relative"
+            onClick={handleSubscribe}
+            disabled={loading}
+          >
+            {loading ? (
+              <>
+                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                </span>
+                <span className="opacity-0">Subscribe Now - $4.99/month</span>
+              </>
+            ) : (
+              'Subscribe Now - $4.99/month'
+            )}
           </button>
           <p className="text-sm text-gray-500">
             Cancel anytime. 3-day free trial included.
