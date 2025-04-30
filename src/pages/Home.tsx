@@ -51,7 +51,7 @@ const Home = () => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                Find Your Perfect Canine Companion
+                Find Your Perfect K9 Kompanion
               </motion.h1>
               <motion.p 
                 className="text-xl mb-8 text-gray-100"
@@ -59,7 +59,7 @@ const Home = () => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Compare dog breeds side-by-side and discover which four-legged friend is right for your lifestyle.
+                Kompare dog breeds side-by-side and discover which four-legged friend is right for your lifestyle.
               </motion.p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4"
@@ -67,9 +67,9 @@ const Home = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <Link to="/compare" className="btn btn-secondary flex items-center justify-center gap-2">
+                <Link to="/kompare" className="btn btn-secondary flex items-center justify-center gap-2">
                   <PawPrint size={20} />
-                  Compare Breeds
+                  Kompare Breeds
                 </Link>
                 <Link to="/facts" className="btn btn-outline bg-white/10 text-white border-white hover:bg-white/20 flex items-center justify-center gap-2">
                   <Search size={20} />
@@ -117,7 +117,7 @@ const Home = () => {
             className="text-3xl md:text-4xl font-bold text-center mb-12"
             variants={itemVariants}
           >
-            What Makes K9Kompare Special?
+            What Makes K9 Kompare Special?
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -128,12 +128,12 @@ const Home = () => {
               <div className="w-16 h-16 bg-primary-100 text-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <PawPrint size={32} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Breed Comparison</h3>
+              <h3 className="text-xl font-semibold mb-3">Breed Komparison</h3>
               <p className="text-gray-600">
-                Compare two dog breeds side-by-side to find your perfect match based on temperament, size, lifespan, and more.
+                Kompare two dog breeds side-by-side to find your perfect match based on temperament, size, lifespan, and more.
               </p>
-              <Link to="/compare" className="inline-flex items-center text-primary-500 font-medium mt-4 hover:text-primary-600 transition-colors">
-                Compare Now <ArrowRight size={16} className="ml-1" />
+              <Link to="/kompare" className="inline-flex items-center text-primary-500 font-medium mt-4 hover:text-primary-600 transition-colors">
+                Kompare Now <ArrowRight size={16} className="ml-1" />
               </Link>
             </motion.div>
             
@@ -186,10 +186,10 @@ const Home = () => {
               <div className="md:w-1/2 p-8 md:p-12">
                 <h2 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Match?</h2>
                 <p className="text-gray-600 mb-6">
-                  Start comparing dog breeds now and discover which furry friend aligns perfectly with your lifestyle and preferences.
+                  Start komparing dog breeds now and discover which furry friend aligns perfectly with your lifestyle and preferences.
                 </p>
                 <Link 
-                  to="/compare" 
+                  to="/kompare" 
                   className="btn btn-primary inline-flex items-center"
                 >
                   Get Started <ArrowRight size={16} className="ml-2" />
@@ -198,7 +198,7 @@ const Home = () => {
               <div className="md:w-1/2 bg-secondary-500 p-8 md:p-12 text-white">
                 <h3 className="text-2xl font-bold mb-4">Join Our Newsletter</h3>
                 <p className="mb-6">
-                  Get weekly dog facts, breed comparisons, and care tips delivered straight to your inbox.
+                  Get weekly dog facts, breed komparisons, and care tips delivered straight to your inbox.
                 </p>
                 <Link 
                   to="/newsletter" 
