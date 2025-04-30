@@ -56,3 +56,27 @@
     @apply font-medium after:w-full;
   }
 }
+
+/* Ezoic Ad Styling for "under page title" */
+.under-page-title-ad {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fafafa;  /* Light background for distinction */
+  border: 1px solid #e0e0e0;  /* Light border */
+  border-radius: 8px;
+}
+
+/* Ezoic Sidebar Sticky Ad */
+.sidebar-sticky-ad {
+  position: sticky;
+  top: 100px; /* Starts sticking after the user scrolls 100px */
+  margin: 24px 0;
+  padding: 16px;
+  background-color: #fffaf4;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
