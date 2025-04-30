@@ -18,16 +18,45 @@ import NotFound from './pages/NotFound';
 // Context
 import { DogProvider } from './context/DogContext';
 
+const GA_MEASUREMENT_ID = 'G-J41HGFEHNQ';
+
 function App() {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(true);
 
+  // Inject Google Analytics script
   useEffect(() => {
-    // Simulate loading of resources
+    const existingScript = document.querySelector(`script[src*="${GA_MEASUREMENT_ID}"]`);
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+      script.async = true;
+      document.head.appendChild(script);
+
+      const inlineScript = document.createElement('script');
+      inlineScript.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_MEASUREMENT_ID}');
+      `;
+      document.head.appendChild(inlineScript);
+    }
+  }, []);
+
+  // Track route changes
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', GA_MEASUREMENT_ID, {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-    
     return () => clearTimeout(timer);
   }, []);
 
