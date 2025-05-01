@@ -86,12 +86,12 @@ const Home = () => {
               <div className="relative h-80 md:h-96 w-full">
                 <img
                   src="https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Happy dogs" 
+                  alt="Happy Dog Breed"
                   className="absolute top-0 right-0 h-64 w-64 object-cover rounded-lg shadow-lg z-20"
                 />
                 <img
                   src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Playful dog" 
+                  alt="Dog Breed"
                   className="absolute bottom-0 left-0 h-64 w-64 object-cover rounded-lg shadow-lg z-10"
                 />
                 <div className="absolute -bottom-4 -right-4 h-24 w-24 bg-secondary-400 rounded-full flex items-center justify-center">
