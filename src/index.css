@@ -57,6 +57,13 @@
   }
 }
 
+.btn-quiz {
+  background: #ff9800;
+  color: white;
+  padding: 0.4em 1em;
+  border-radius: 6px;
+}
+
 /* Ezoic Ad Styling for "under page title" */
 .under-page-title-ad {
   margin-top: 20px;
