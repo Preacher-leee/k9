@@ -8,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="bg-primary-600 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-        {/* Main Grid Section */}
+        {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo & Slogan */}
+          {/* Logo & Social */}
           <div>
             <Logo className="h-12 w-auto mb-4" isWhite />
             <p className="text-sm text-gray-300 mb-4">
@@ -67,19 +67,18 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-10 border-t border-gray-700 pt-6 text-sm text-gray-400">
-          {/* Policies */}
-          <div className="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-6 mb-4 text-center">
+        {/* Policies */}
+        <div className="mt-10 border-t border-gray-700 pt-6 text-sm text-gray-400 text-center">
+          <div className="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-6 mb-4">
             <a href="https://www.termsfeed.com/live/f7885e6c-d04a-4f66-b6e6-bfd4b5530cec" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="https://www.termsfeed.com/live/f7854bbc-cb72-41dd-b2f3-263b1dd613e5" className="hover:text-white transition-colors">Terms of Use</a>
             <a href="https://www.termsfeed.com/live/68a4f8b0-9e4c-478c-87f4-ef5e919b45df" className="hover:text-white transition-colors">Cookie Policy</a>
           </div>
+        </div>
 
-          {/* Copyright */}
-          <p className="text-center text-gray-400 mt-2">
-            &copy; {currentYear} TLee Apps | K9Kompare.com - All rights reserved.
-          </p>
+        {/* Final Bottom Line */}
+        <div className="mt-4 text-center text-sm text-gray-400">
+          &copy; {currentYear} TLee Apps | K9Kompare.com - All rights reserved.
         </div>
       </div>
     </footer>
