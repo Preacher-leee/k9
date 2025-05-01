@@ -1,47 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J41HGFEHNQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  gtag('config', 'G-J41HGFEHNQ');
-</script>
-    <meta charset="UTF-8" />
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "K9Kompare",
-  "url": "https://www.k9kompare.com/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.k9kompare.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-    <meta property="og:title" content="K9Kompare – Dog Breed Comparison Made Easy" />
-    <meta property="og:description" content="Compare two dog breeds instantly, get unbiased facts, training tips, and adoption info." />
-    <meta property="og:image" content="https://www.k9kompare.com/assets/preview.jpg" />
-    <meta property="og:url" content="https://www.k9kompare.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:updated_time" content="2025-05-01T12:00:00Z" />
-    <link rel="canonical" href="https://www.k9kompare.com/" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kompare dog breeds side-by-side with K9 Kompare. Find the perfect dog breed for your lifestyle with our interactive dog breed comparison tool." />
-    <meta name="monetag" content="475ff98f3061a2eb80e3bb16c4cb75c2">
-    <title>K9 Kompare | Kompare a breed. Rescue a friend.</title>
-    <h1>Kompare Dog Breeds Side-by-Side – Find Your Ideal Canine Companion</h1>
-      <h2>Unbiased Facts, Breed Differences, and Adoption Resources in One Place</h2>
-        <a href="/about">About K9Kompare</a>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <title>K9Kompare – Compare Dog Breeds Side-by-Side</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.k9kompare.com/" />
+
+  <!-- OpenGraph Tags -->
+  <meta property="og:title" content="K9Kompare – Dog Breed Comparison Made Easy" />
+  <meta property="og:description" content="Compare two dog breeds instantly, get unbiased facts, training tips, and adoption info." />
+  <meta property="og:image" content="https://www.k9kompare.com/assets/preview.jpg" />
+  <meta property="og:url" content="https://www.k9kompare.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="2025-05-01T12:00:00Z" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "K9Kompare",
+      "url": "https://www.k9kompare.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.k9kompare.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header, main, footer {
+      padding: 1rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Compare Dog Breeds Side-by-Side – Find Your Ideal Canine Companion</h1>
+    <h2>Unbiased Facts, Breed Differences, and Adoption Resources in One Place</h2>
+  </header>
+
+  <main class="container">
+    <section>
+      <p>Welcome to K9Kompare — your one-stop site to compare dog breeds, explore their temperaments, exercise needs, and health stats, and find out which pup is right for your lifestyle.</p>
+
+      <p>Looking to adopt or get expert breed guidance? Check out these trusted resources:</p>
+
+      <ul>
+        <li><a href="https://www.akc.org/dog-breeds/" target="_blank" rel="noopener noreferrer">American Kennel Club Breed Directory</a></li>
+        <li><a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer">Petfinder – Adoptable Dogs Near You</a></li>
+        <li><a href="https://www.aspca.org/pet-care/dog-care" target="_blank" rel="noopener noreferrer">ASPCA Dog Care Resources</a></li>
+      </ul>
+
+      <p><a href="/about">Learn more about K9Kompare</a> or <a href="/contact">get in touch</a> if you have questions!</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 K9Kompare. All rights reserved.</p>
+  </footer>
+</body>
 </html>
