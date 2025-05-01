@@ -7,7 +7,7 @@ const DOG_CEO_API_URL = 'https://dog.ceo/api';
 const HTTP_DOG_API_URL = 'https://http.dog';
 
 // API Key
-const DOG_API_KEY = 'live_WqxFmIlbKwcg8VQ2V0B7N65N9vZL3mWnB0GWAWzSNGogQUJBuiLqKBxSTFYjkOQW';
+const DOG_API_KEY = 'live_fI1x0t5s1Fd8kmdoYzSaVWuDdMPlKIFwltVxxtQr53fe4BwxWw77ofbjKrYtS7XV';
 
 // Mock dog facts data
 const mockDogFacts: DogFact[] = [
