@@ -32,33 +32,21 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/kompare" className="text-gray-300 hover:text-white transition-colors">Compare Dog Breeds</Link></li>
               <li><Link to="/facts" className="text-gray-300 hover:text-white transition-colors">Fun Dog Facts</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/quiz" className="text-gray-300 hover:text-white transition-colors">Quiz</Link></li>
               <li><Link to="/resources" className="text-gray-300 hover:text-white transition-colors">Resources</Link></li>
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="https://www.akc.org/dog-breeds/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  American Kennel Club Breed Directory
-                </a>
-              </li>
-              <li>
-                <a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  Petfinder – Adoptable Dogs Near You
-                </a>
-              </li>
-              <li>
-                <a href="https://www.aspca.org/pet-care/dog-care" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  ASPCA Dog Care Resources
-                </a>
-              </li>
-            </ul>
-          </div>
-
+          <section>
+  <h2>Resources</h2>
+  <ul>
+    <li><a href="https://www.akc.org/" target="_blank" rel="noopener noreferrer">American Kennel Club</a></li>
+    <li><a href="https://www.aspca.org/" target="_blank" rel="noopener noreferrer">ASPCA</a></li>
+    <li><a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer">Petfinder</a></li>
+    <li><a href="https://dogtime.com/" target="_blank" rel="noopener noreferrer">DogTime</a></li>
+  </ul>
+</section>
           {/* Newsletter */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Newsletter</h3>
