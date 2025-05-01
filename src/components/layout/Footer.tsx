@@ -52,15 +52,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-gray-400">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-4 mt-4 md:mt-0">
+        <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-gray-400"
               <a href="https://www.termsfeed.com/live/f7885e6c-d04a-4f66-b6e6-bfd4b5530cec" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="https://www.termsfeed.com/live/f7854bbc-cb72-41dd-b2f3-263b1dd613e5" className="hover:text-white transition-colors">Terms of Use</a>
               <a href="https://www.termsfeed.com/live/68a4f8b0-9e4c-478c-87f4-ef5e919b45df" className="hover:text-white transition-colors">Cookie Policy</a>
-              <p>&copy; {currentYear} TLee Apps | K9Kompare.com - All rights reserved.</p>
             </div>
           </div>
+          <div className="flex flex-col md:flex-row justify-between items-center">
+             <p>&copy; {currentYear} TLee Apps | K9Kompare.com - All rights reserved.</p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
         </div>
       </div>
     </footer>
