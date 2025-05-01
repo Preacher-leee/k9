@@ -36,10 +36,10 @@ const Navbar = () => {
 
   const navLinks = [
     { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
     { to: '/kompare', label: 'Kompare Breeds' },
     { to: '/facts', label: 'Fun Dog Facts' },
-    { to: '/newsletter', label: 'Newsletter' },
-    { to: '/about', label: 'About' },
+    { to: '/quiz', label: 'Quiz' },
   ];
 
   const navbarVariants = {
@@ -62,7 +62,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center">
               <img 
                 src="/logo.png" 
-                alt="K9Kompare Logo" 
+                alt="K9Kompare Dog Breed Compare Logo" 
                 className="h-12 w-auto"
               />
             </Link>
