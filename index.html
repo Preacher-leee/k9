@@ -5,7 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>K9Kompare – Compare Dog Breeds Side-by-Side</title>
+  
+<header>
+    <h1>Compare Dog Breeds Side-by-Side – Find Your Ideal Canine Companion</h1>
+    <h2>Unbiased Facts, Breed Differences, and Adoption Resources in One Place</h2>
+  </header>
 
+  <main class="container">
+    <section>
+      <p>Welcome to K9Kompare — your one-stop site to compare dog breeds, explore their temperaments, exercise needs, and health stats, and find out which pup is right for your lifestyle.</p>
+
+      <p>Looking to adopt or get expert breed guidance? Check out these trusted resources:</p>
+
+      <ul>
+        <li><a href="https://www.akc.org/dog-breeds/" target="_blank" rel="noopener noreferrer">American Kennel Club Breed Directory</a></li>
+        <li><a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer">Petfinder – Adoptable Dogs Near You</a></li>
+        <li><a href="https://www.aspca.org/pet-care/dog-care" target="_blank" rel="noopener noreferrer">ASPCA Dog Care Resources</a></li>
+      </ul>
+
+      <p><a href="/about">Learn more about K9Kompare</a> or <a href="/contact">get in touch</a> if you have questions!</p>
+    </section>
+  </main>
+  
   <!-- Canonical -->
   <link rel="canonical" href="https://www.k9kompare.com/" />
 
@@ -31,75 +52,11 @@
       }
     }
   </script>
-
-  <!-- Styles -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-
-    header, main, footer {
-      padding: 1rem;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
-    }
-
-    a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .container {
-        max-width: 1200px;
-        margin: auto;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <header>
-    <h1>Compare Dog Breeds Side-by-Side – Find Your Ideal Canine Companion</h1>
-    <h2>Unbiased Facts, Breed Differences, and Adoption Resources in One Place</h2>
-  </header>
-
-  <main class="container">
-    <section>
-      <p>Welcome to K9Kompare — your one-stop site to compare dog breeds, explore their temperaments, exercise needs, and health stats, and find out which pup is right for your lifestyle.</p>
-
-      <p>Looking to adopt or get expert breed guidance? Check out these trusted resources:</p>
-
-      <ul>
-        <li><a href="https://www.akc.org/dog-breeds/" target="_blank" rel="noopener noreferrer">American Kennel Club Breed Directory</a></li>
-        <li><a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer">Petfinder – Adoptable Dogs Near You</a></li>
-        <li><a href="https://www.aspca.org/pet-care/dog-care" target="_blank" rel="noopener noreferrer">ASPCA Dog Care Resources</a></li>
-      </ul>
-
-      <p><a href="/about">Learn more about K9Kompare</a> or <a href="/contact">get in touch</a> if you have questions!</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 K9Kompare. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  <body>
+     <div id="root"></div>
+     <script type="module" src="/src/main.tsx"></script>
+   </body>
+ </html>
