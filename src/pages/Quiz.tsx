@@ -1,90 +1,105 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const breedData: { [key: string]: { image: string; info: string } } = {
+const breedData: { [key: string]: { image: string; info: string; profile: string } } = {
   "German Shepherd": {
     image: "/images/breeds/german-shepherd.jpg",
-    info: "German Shepherds are intelligent, loyal, and versatile working dogs."
+    info: "German Shepherds are intelligent, loyal, and versatile working dogs.",
+    profile: "German Shepherds excel in service roles due to their trainability and loyalty. They're great for active owners who want a smart companion."
   },
   "Labrador Retriever": {
     image: "/images/breeds/labrador-retriever.jpg",
-    info: "Labradors are friendly, outgoing, and great with families."
-  },
-  "Bulldog": {
-    image: "/images/breeds/bulldog.jpg",
-    info: "Bulldogs are calm, courageous, and very affectionate with people."
-  },
-  "Cavalier King Charles Spaniel": {
-    image: "/images/breeds/cavalier.jpg",
-    info: "Cavaliers are affectionate, gentle, and great for families."
-  },
-  "Chihuahua": {
-    image: "/images/breeds/chihuahua.jpg",
-    info: "Chihuahuas are tiny but bold, and thrive in small spaces."
-  },
-  "Pug": {
-    image: "/images/breeds/pug.jpg",
-    info: "Pugs are playful, charming, and love to be around people."
-  },
-  "Border Collie": {
-    image: "/images/breeds/border-collie.jpg",
-    info: "Border Collies are extremely energetic and highly trainable."
-  },
-  "Australian Shepherd": {
-    image: "/images/breeds/australian-shepherd.jpg",
-    info: "Aussies are active, intelligent, and love to herd and work."
+    info: "Labradors are friendly, outgoing, and great with families.",
+    profile: "Labradors love people, water, and exercise. They're perfect for active families and first-time dog owners."
   },
   "Golden Retriever": {
     image: "/images/breeds/golden-retriever.jpg",
-    info: "Golden Retrievers are loving, intelligent, and ideal family pets."
-  },
-  "Husky": {
-    image: "/images/breeds/husky.jpg",
-    info: "Huskies are energetic, free-spirited, and known for their stunning looks."
-  },
-  "Boxer": {
-    image: "/images/breeds/boxer.jpg",
-    info: "Boxers are playful, energetic, and loyal companions."
-  },
-  "Pit Bull": {
-    image: "/images/breeds/pit-bull.jpg",
-    info: "Pit Bulls are strong, loyal, and full of personality."
-  },
-  "Belgian Malinois": {
-    image: "/images/breeds/belgian-malinois.jpg",
-    info: "Malinois are intense working dogs, ideal for experienced owners."
-  },
-  "Shih Tzu": {
-    image: "/images/breeds/shih-tzu.jpg",
-    info: "Shih Tzus are charming lapdogs with a royal demeanor."
-  },
-  "Cocker Spaniel": {
-    image: "/images/breeds/cocker-spaniel.jpg",
-    info: "Cocker Spaniels are sweet-natured, affectionate, and enjoy companionship."
-  },
-  "Standard Poodle": {
-    image: "/images/breeds/poodle.jpg",
-    info: "Standard Poodles are intelligent, hypoallergenic, and versatile."
-  },
-  "Doberman": {
-    image: "/images/breeds/doberman.jpg",
-    info: "Dobermans are sleek, powerful, and loyal protectors."
+    info: "Golden Retrievers are friendly, intelligent, and eager to please.",
+    profile: "Goldens are beloved for their sweet nature and patience. They make excellent family dogs and therapy animals."
   },
   "French Bulldog": {
     image: "/images/breeds/french-bulldog.jpg",
-    info: "Frenchies are compact, sociable, and love lounging."
+    info: "French Bulldogs are compact, playful, and low-energy.",
+    profile: "Ideal for apartment living, Frenchies are affectionate and adapt well to quiet or busy households."
   },
-  "Bichon Frise": {
-    image: "/images/breeds/bichon-frise.jpg",
-    info: "Bichons are fluffy, cheerful, and hypoallergenic companions."
+  "Bulldog": {
+    image: "/images/breeds/bulldog.jpg",
+    info: "Bulldogs are calm, courageous, and affectionate.",
+    profile: "A great companion for city living, Bulldogs require minimal exercise and love snuggles."
+  },
+  "Beagle": {
+    image: "/images/breeds/beagle.jpg",
+    info: "Beagles are curious, energetic, and great with kids.",
+    profile: "Their strong nose and playful attitude make Beagles great for families and outdoor lovers."
+  },
+  "Poodle": {
+    image: "/images/breeds/poodle.jpg",
+    info: "Poodles are smart, proud, and hypoallergenic.",
+    profile: "Poodles come in all sizes and love mental challenges. Great for allergy-sensitive homes."
+  },
+  "Rottweiler": {
+    image: "/images/breeds/rottweiler.jpg",
+    info: "Rottweilers are confident, protective, and loyal.",
+    profile: "Rottweilers are natural guardians. Best for experienced owners who want a strong, intelligent dog."
+  },
+  "Yorkshire Terrier": {
+    image: "/images/breeds/yorkshire-terrier.jpg",
+    info: "Yorkies are small, bold, and full of personality.",
+    profile: "Don’t let the size fool you—Yorkies are fearless and thrive in both city and country life."
+  },
+  "Dachshund": {
+    image: "/images/breeds/dachshund.jpg",
+    info: "Dachshunds are curious, brave, and stubborn.",
+    profile: "These little hunters are loyal and lively, great for small spaces and strong personalities."
   },
 };
 
 const questions = [
-  // same questions as before...
+  {
+    question: "What is your living situation?",
+    options: ["Apartment", "House with yard", "Farm or large land"]
+  },
+  {
+    question: "How active are you on a daily basis?",
+    options: ["Low", "Moderate", "Very Active"]
+  },
+  {
+    question: "What size dog are you looking for?",
+    options: ["Small", "Medium", "Large"]
+  },
+  {
+    question: "Do you have children?",
+    options: ["Yes", "No"]
+  },
+  {
+    question: "Any allergy concerns?",
+    options: ["Yes", "No"]
+  },
+  {
+    question: "What's more important: obedience or independence?",
+    options: ["Obedience", "Independence"]
+  },
+  {
+    question: "How much grooming are you okay with?",
+    options: ["Low", "Moderate", "High"]
+  },
+  {
+    question: "Do you need a guard dog?",
+    options: ["Yes", "No"]
+  }
 ];
 
 const resultsMap: { [key: string]: string[] } = {
-  // same mapping as before...
+  "Apartment,Low,Small,Yes,Yes,Obedience,Low,No": ["French Bulldog"],
+  "House with yard,Moderate,Large,Yes,No,Obedience,Moderate,Yes": ["German Shepherd"],
+  "House with yard,Very Active,Large,Yes,No,Obedience,High,No": ["Labrador Retriever"],
+  "House with yard,Moderate,Medium,Yes,No,Obedience,High,No": ["Golden Retriever"],
+  "Apartment,Low,Medium,Yes,Yes,Obedience,Moderate,No": ["Bulldog"],
+  "Apartment,Moderate,Small,Yes,Yes,Obedience,High,No": ["Yorkshire Terrier"],
+  "Apartment,Low,Small,No,Yes,Independence,Low,No": ["Dachshund"],
+  "House with yard,Moderate,Medium,Yes,No,Obedience,High,Yes": ["Rottweiler"],
+  "House with yard,Moderate,Medium,Yes,Yes,Obedience,High,No": ["Poodle"],
+  "Farm or large land,Very Active,Medium,Yes,No,Independence,Low,No": ["Beagle"]
 };
 
 const Quiz: React.FC = () => {
