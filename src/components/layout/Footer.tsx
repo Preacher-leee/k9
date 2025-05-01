@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Logo className="h-12 w-auto mb-4" isWhite />
             <p className="text-sm text-gray-300 mb-4">
-              Compare a bread. Rescue a friend.
+              Compare a breed. Rescue a friend.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.x.com/k9mpare" className="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
@@ -31,17 +31,16 @@ const Footer = () => {
               <li><Link to="/kompare" className="text-gray-300 hover:text-white transition-colors">Kompare Breeds</Link></li>
               <li><Link to="/facts" className="text-gray-300 hover:text-white transition-colors">Fun Dog Facts</Link></li>
               <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
-        
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-2">
-             <a href="https://www.akc.org/dog-breeds/" target="_blank" rel="noopener noreferrer">American Kennel Club Breed Directory</a>
-             <a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer">Petfinder – Adoptable Dogs Near You</a>
-             <a href="https://www.aspca.org/pet-care/dog-care" target="_blank" rel="noopener noreferrer">ASPCA Dog Care Resources</a>
-
+              <li><a href="https://www.akc.org/dog-breeds/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">American Kennel Club Breed Directory</a></li>
+              <li><a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Petfinder – Adoptable Dogs Near You</a></li>
+              <li><a href="https://www.aspca.org/pet-care/dog-care" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">ASPCA Dog Care Resources</a></li>
+            </ul>
           </div>
 
           <div>
