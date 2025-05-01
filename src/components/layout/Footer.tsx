@@ -31,16 +31,17 @@ const Footer = () => {
               <li><Link to="/kompare" className="text-gray-300 hover:text-white transition-colors">Kompare Breeds</Link></li>
               <li><Link to="/facts" className="text-gray-300 hover:text-white transition-colors">Fun Dog Facts</Link></li>
               <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+        
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
             <ul className="space-y-2">
-              <li><a href="https://www.aspca.org/pet-care/dog-care/general-dog-care" className="text-gray-300 hover:text-white transition-colors">Dog Care Tips</a></li>
-              <li><a href="https://womensanimalcenter.org/our-training-programs/dog-behavior-resources" className="text-gray-300 hover:text-white transition-colors">Training Resources</a></li>
-              <li><a href="https://www.spcaflorida.org/adoptioninfo" className="text-gray-300 hover:text-white transition-colors">Adoption Info</a></li>
-            </ul>
+             <a href="https://www.akc.org/dog-breeds/" target="_blank" rel="noopener noreferrer">American Kennel Club Breed Directory</a>
+             <a href="https://www.petfinder.com/" target="_blank" rel="noopener noreferrer">Petfinder – Adoptable Dogs Near You</a>
+             <a href="https://www.aspca.org/pet-care/dog-care" target="_blank" rel="noopener noreferrer">ASPCA Dog Care Resources</a>
+
           </div>
 
           <div>
