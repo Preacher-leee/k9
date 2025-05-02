@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Preload critical resources -->
+<link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/images/hero.webp" as="image" />
+
+<!-- Lazy-load all other styles -->
+<link rel="stylesheet" href="/src/index.css" media="print" onload="this.media='all'" />
+
+<!-- Defer JS -->
+<script src="/main.js" defer></script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
