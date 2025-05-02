@@ -13,14 +13,14 @@ const Footer = () => {
           {/* Logo & Social */}
           <div>
             <Logo className="h-12 w-auto mb-4" isWhite />
-            <p className="text-sm text-gray-300 mb-4">
+            <p className="text-sm text-gray-600 mb-4">
               Compare a breed. Rescue a friend.
             </p>
             <div className="flex space-x-4 mt-2">
-              <a href="https://www.x.com/k9mpare" className="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
+              <a href="https://www.x.com/k9mpare" className="text-gray-600 hover:text-white transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="https://www.instagram.com/k9mpare" className="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/k9mpare" className="text-gray-600 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>
@@ -39,6 +39,16 @@ const Footer = () => {
           </div>
 
           <section>
+          <br>
+            <div className="space-y-5">
+              </div>
+            <div className="mt-4 text-center text-sm text-orange-700">
+          &copy; {currentYear} TLee Apps | K9Kompare.com - All rights reserved
+          </br>
+        </div>
+            </section>
+        
+        <section>
   <h2>Resources</h2>
   <ul>
     <li><a href="https://www.akc.org/" target="_blank" rel="noopener noreferrer">American Kennel Club</a></li>
@@ -63,13 +73,7 @@ const Footer = () => {
             <a href="https://www.termsfeed.com/live/68a4f8b0-9e4c-478c-87f4-ef5e919b45df" className="hover:text-white transition-colors">Cookie Policy</a>
           </div>
         </div>
-
-        {/* Final Bottom Line */}
-        <div className="mt-4 text-center text-sm text-gray-400">
-          &copy; {currentYear} TLee Apps | K9Kompare.com - All rights reserved.
-        </div>
-      </div>
-    </footer>
+     </footer>
   );
 };
 
