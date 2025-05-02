@@ -32,7 +32,15 @@ const Home = () => {
       transition: { duration: 0.5 }
     }
   };
-
+  
+<button
+  onClick={() => document.body.classList.toggle('high-contrast')}
+  aria-label="Toggle High Contrast Mode"
+  className="mt-4 text-sm underline text-blue-600"
+>
+  Toggle High Contrast
+</button>
+  
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
