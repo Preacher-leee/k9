@@ -158,7 +158,7 @@ const Navbar = () => {
                 {user ? (
                   <>
                     {!isPremium && (
-                      <button
+                      <button aria-label="Upgrade to premium"
                         onClick={() => {
                           setMobileMenuOpen(false);
                           setSubscribeModalOpen(true);
@@ -168,7 +168,7 @@ const Navbar = () => {
                         Upgrade to Premium
                       </button>
                     )}
-                    <button
+                    <button aria-label="Sign out"
                       onClick={() => {
                         signOut();
                         setMobileMenuOpen(false);
@@ -179,7 +179,7 @@ const Navbar = () => {
                     </button>
                   </>
                 ) : (
-                  <button
+                  <button aria-label="Sign In"
                     onClick={() => {
                       setMobileMenuOpen(false);
                       setAuthModalOpen(true);
