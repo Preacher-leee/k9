@@ -95,7 +95,7 @@ const Facts = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Fun Dog Facts</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
             Discover interesting and fun facts about dogs that will surprise and delight dog lovers of all ages.
           </p>
           <motion.button
@@ -124,7 +124,7 @@ const Facts = () => {
           <div className="flex justify-center items-center py-20">
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 border-4 border-secondary-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-              <p className="text-gray-600">Fetching interesting dog facts...</p>
+              <p className="text-gray-800">Fetching interesting dog facts...</p>
             </div>
           </div>
         ) : (
