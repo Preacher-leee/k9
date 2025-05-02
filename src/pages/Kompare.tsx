@@ -197,7 +197,7 @@ const Compare = () => {
         <div className="p-6 flex-grow">
           <div className="flex items-start justify-between mb-4">
             <h2 className="text-2xl font-bold">{breed.name}</h2>
-            <button 
+            <button aria-label="Copy Comparison Link"
               className="text-gray-500 hover:text-primary-500 transition-colors"
               onClick={() => {
                 const url = new URL(window.location.href);
