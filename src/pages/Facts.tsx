@@ -112,7 +112,7 @@ const Facts = () => {
         {error ? (
           <div className="text-center py-8">
             <p className="text-red-500 mb-4">{error}</p>
-            <button 
+            <button aria-label="Error"
               onClick={refreshFacts}
               className="btn btn-primary"
               disabled={loading || animating}
@@ -171,6 +171,13 @@ const Facts = () => {
                 ))}
               </motion.div>
             </AnimatePresence>
+            <button
+  onClick={() => document.body.classList.toggle('high-contrast')}
+  aria-label="Toggle High Contrast Mode"
+  className="mt-4 text-sm underline text-blue-600"
+>
+  Toggle High Contrast
+</button>
             
             {/* Pagination */}
             <div className="flex justify-center space-x-2">
