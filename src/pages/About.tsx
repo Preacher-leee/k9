@@ -39,7 +39,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">About K9 Kompare</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
             Our mission is to make dog breed research fun, engaging, and accessible to everyone.
           </p>
         </div>
@@ -83,7 +83,7 @@ const About = () => {
                 <Heart size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 To make the process of finding the right dog breed fun, engaging, and accessible to everyone, promoting responsible dog ownership and improving the lives of dogs and their humans.
               </p>
             </motion.div>
@@ -93,7 +93,7 @@ const About = () => {
                 <Search size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-3">Our Approach</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 We combine comprehensive data with an easy-to-use interface to help you compare dog breeds side-by-side. We focus on the characteristics that matter most when choosing a breed that fits your lifestyle.
               </p>
             </motion.div>
