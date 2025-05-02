@@ -88,6 +88,16 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
+.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast button {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
 /* Base layout */
 body {
   font-family: Arial, sans-serif;
