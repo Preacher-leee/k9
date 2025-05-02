@@ -71,7 +71,7 @@ const Newsletter = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Join Our Newsletter</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
             Subscribe to our weekly newsletter to receive curated dog facts, breed highlights, and exclusive content delivered straight to your inbox.
           </p>
         </div>
@@ -89,7 +89,7 @@ const Newsletter = () => {
                     <CheckCircle size={32} className="text-green-500" />
                   </div>
                   <h2 className="text-2xl font-bold mb-4">Thank You for Subscribing!</h2>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-800 mb-6">
                     You've successfully subscribed to our newsletter. Check your inbox for a confirmation email soon!
                   </p>
                   <button
