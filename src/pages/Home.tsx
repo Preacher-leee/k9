@@ -137,7 +137,7 @@ const Home = () => {
                 <PawPrint size={32} />
               </div>
               <h3 className="text-xl font-semibold mb-3">Breed Komparison</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 Kompare two dog breeds side-by-side to find your perfect match based on temperament, size, lifespan, and more.
               </p>
               <Link to="/kompare" className="inline-flex items-center text-primary-500 font-medium mt-4 hover:text-primary-600 transition-colors">
@@ -153,7 +153,7 @@ const Home = () => {
                 <Search size={32} />
               </div>
               <h3 className="text-xl font-semibold mb-3">Fun Dog Facts</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 Discover interesting and fun facts about dogs that will surprise and delight dog lovers of all ages.
               </p>
               <Link to="/facts" className="inline-flex items-center text-primary-500 font-medium mt-4 hover:text-primary-600 transition-colors">
@@ -169,7 +169,7 @@ const Home = () => {
                 <Mail size={32} />
               </div>
               <h3 className="text-xl font-semibold mb-3">Weekly Newsletter</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 Sign up for our weekly newsletter to receive curated dog facts, breed highlights, and exclusive content.
               </p>
               <Link to="/newsletter" className="inline-flex items-center text-primary-500 font-medium mt-4 hover:text-primary-600 transition-colors">
@@ -193,7 +193,7 @@ const Home = () => {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 p-8 md:p-12">
                 <h2 className="text-3xl font-bold mb-4">Ready to Find Your Perfect Match?</h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-800 mb-6">
                   Start komparing dog breeds now and discover which furry friend aligns perfectly with your lifestyle and preferences.
                 </p>
                 <Link 
