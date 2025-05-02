@@ -75,7 +75,7 @@ const Navbar = () => {
                   to={link.to}
                   className={({ isActive }) => 
                     `nav-link ${isActive ? 'nav-link-active' : ''} ${
-                      scrolled ? 'text-black-100' : 'text-white'
+                      scrolled ? 'text-black-100' : 'text-orange-100'
                     }`
                   }
                 >
