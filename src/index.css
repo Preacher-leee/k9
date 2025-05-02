@@ -17,6 +17,11 @@
     @apply font-display font-semibold text-primary-600;
   }
 }
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter.woff2') format('woff2');
+  font-display: swap;
+}
 
 @layer components {
   .btn {
@@ -55,12 +60,6 @@
   .nav-link-active {
     @apply font-medium after:w-full;
   }
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/inter.woff2') format('woff2');
-  font-display: swap;
 }
 
 .btn-quiz {
