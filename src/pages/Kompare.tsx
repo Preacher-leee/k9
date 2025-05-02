@@ -264,7 +264,7 @@ const Compare = () => {
                 <Dog size={18} className="text-primary-500" />
                 Breed Group
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 {breed.breed_group || 'Not specified'} 
                 {breed.bred_for && ` - ${breed.bred_for}`}
               </p>
@@ -292,7 +292,7 @@ const Compare = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Kompare Dog Breeds</h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
             Select two dog breeds to kompare side-by-side and discover which four-legged friend is the perfect match for your lifestyle.
           </p>
         </div>
