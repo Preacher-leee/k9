@@ -34,7 +34,7 @@ const NotFound = () => {
             <AlertTriangle size={24} className="text-secondary-500 mr-2" />
             <h1 className="text-3xl font-bold">Page Not Found</h1>
           </div>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-800 mb-8">
             Oops! It looks like the page you're looking for doesn't exist or has been moved.
           </p>
           <Link 
