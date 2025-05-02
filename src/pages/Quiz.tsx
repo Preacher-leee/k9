@@ -54,6 +54,14 @@ const breedData: { [key: string]: { image: string; info: string; profile: string
   },
 };
 
+<button
+  onClick={() => document.body.classList.toggle('high-contrast')}
+  aria-label="Toggle High Contrast Mode"
+  className="mt-4 text-sm underline text-blue-600"
+>
+  Toggle High Contrast
+</button>
+
 const questions = [
   {
     question: "What is your living situation?",
