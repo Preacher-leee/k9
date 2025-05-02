@@ -213,7 +213,7 @@ const Facts = () => {
                         className="max-h-64 rounded-lg shadow-sm"
                       />
                     </div>
-                    <p className="text-sm text-gray-500 text-center mt-2">
+                    <p className="text-sm text-gray-800 dark:text-gray-100 text-center mt-2">
                       Images from <a href="https://http.dog/" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:underline">HTTP.dog</a>
                     </p>
                   </div>
