@@ -103,6 +103,11 @@
   color: #000 !important;
 }
 
+.breed-image {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Base layout */
 body {
   font-family: Arial, sans-serif;
