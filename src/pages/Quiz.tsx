@@ -167,7 +167,7 @@ const Quiz: React.FC = () => {
                   className="w-40 h-40 object-cover rounded-full mb-3"
                 />
                 <h3 className="text-lg font-bold mb-1">{breed}</h3>
-                <p className="text-sm text-gray-600 text-center">
+                <p className="text-sm text-gray-800 text-center">
                   {breedData[breed]?.info || 'No information available.'}
                 </p>
               </div>
