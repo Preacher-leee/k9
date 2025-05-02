@@ -32,6 +32,14 @@ const RatingBar = ({ value, max = 5, color = "primary" }: { value: number; max?:
   </div>
 );
 
+<button
+  onClick={() => document.body.classList.toggle('high-contrast')}
+  aria-label="Toggle High Contrast Mode"
+  className="mt-4 text-sm underline text-blue-600"
+>
+  Toggle High Contrast
+</button>
+
 const Compare = () => {
   const { 
     breeds, 
