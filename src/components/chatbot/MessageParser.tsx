@@ -1,36 +1,25 @@
-interface ActionProvider {
-  handleBreedRecommendation: () => void;
-  handleAdoptionInfo: () => void;
-  handleTrainingInfo: () => void;
-  handleHealthInfo: () => void;
-  handleDefault: () => void;
-}
-
-interface MessageParserProps {
-  actionProvider: ActionProvider;
-  state: any;
-}
-
 class MessageParser {
-  actionProvider: ActionProvider;
-  state: any;
-
-  constructor({ actionProvider, state }: MessageParserProps) {
+  constructor(actionProvider, state) {
     this.actionProvider = actionProvider;
     this.state = state;
   }
 
-  parse(message: string) {
-    const lower = message.toLowerCase();
+  parse(message) {
+    const lowerCase = message.toLowerCase();
 
-    if (lower.includes('breed') || lower.includes('recommend')) {
+    // Question detection (rudimentary check)
+    const isQuestion = /[?]|^(what|how|why|when|where|who)\b/i.test(message);
+
+    if (lowerCase.includes('breed') || lowerCase.includes('recommend')) {
       this.actionProvider.handleBreedRecommendation();
-    } else if (lower.includes('adopt') || lower.includes('rescue')) {
+    } else if (lowerCase.includes('adopt') || lowerCase.includes('rescue')) {
       this.actionProvider.handleAdoptionInfo();
-    } else if (lower.includes('train') || lower.includes('training')) {
+    } else if (lowerCase.includes('train') || lowerCase.includes('training')) {
       this.actionProvider.handleTrainingInfo();
-    } else if (lower.includes('health') || lower.includes('vet')) {
+    } else if (lowerCase.includes('health') || lowerCase.includes('vet')) {
       this.actionProvider.handleHealthInfo();
+    } else if (isQuestion) {
+      this.actionProvider.handleDefault(); // fallback for other questions
     } else {
       this.actionProvider.handleDefault();
     }
