@@ -80,7 +80,7 @@ font-family: 'Inter', sans-serif;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transition: opacity 2.5s ease;
+  transition: opacity 1s ease;
 }
 
 .splash.fade-out {
@@ -91,7 +91,7 @@ font-family: 'Inter', sans-serif;
 #logo path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: draw 3.5s ease forwards;
+  animation: draw 1.5s ease forwards;
 }
 
 @keyframes draw {
@@ -102,8 +102,8 @@ font-family: 'Inter', sans-serif;
 
 #logo {
     opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
-    animation-delay: 1.5s;
+    animation: fadeIn 1.5s ease-in forwards;
+    animation-delay: 1s;
 }
 
 @keyframes fadeOut {
