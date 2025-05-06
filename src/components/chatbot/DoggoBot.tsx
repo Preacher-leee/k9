@@ -4,6 +4,7 @@ import 'react-chatbot-kit/build/main.css';
 import { MessageParser } from './MessageParser';
 import { ActionProvider } from './ActionProvider';
 import { Bot, X } from 'lucide-react';
+import config from './config'; 
 
 const config = {
   initialMessages: [
