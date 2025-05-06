@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
@@ -16,12 +17,24 @@ import NotFound from './pages/NotFound';
 
 // Components
 import DoggoBot from './components/chatbot/DoggoBot';
+import SplashScreen from './components/SplashScreen';
 
 // Context
 import { DogProvider } from './context/DogContext';
 
 function App() {
+  const [isSplashVisible, setIsSplashVisible] = useState(true);
   const location = useLocation();
+
+  // Optional: hide splash after a max timeout in case onFinish fails
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsSplashVisible(false), 6000); // Failsafe
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isSplashVisible) {
+    return <SplashScreen onFinish={() => setIsSplashVisible(false)} />;
+  }
 
   return (
     <DogProvider>
