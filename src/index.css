@@ -7,6 +7,10 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling during splash */
   }
 
   *{
@@ -16,6 +20,10 @@
 }
   body {
     @apply bg-cream text-gray-800 font-sans;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling during splash */
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -60,13 +68,6 @@
   .nav-link-active {
     @apply font-medium after:w-full;
     }
-  }
-
-sbody, shtml {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Prevent scrolling during splash */
 }
 
 .splash {
