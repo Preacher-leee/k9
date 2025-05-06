@@ -8,17 +8,18 @@
     <!-- Lazy-load all other styles -->
     <link rel="stylesheet" href="/src/index.css" media="print" onload="this.media='all'" />
 
-    <!-- Defer JS -->
-    <script src="/main.js" defer></script>
-
+    <!-- Meta tags -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Compare dog breeds side by side with K9Kompare. Find the perfect dog breed for your family, lifestyle, and home.">
     <meta name="monetag" content="475ff98f3061a2eb80e3bb16c4cb75c2">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Compare Dog Breeds | Find the Best Match – K9Kompare</title>
-    
-    <!-- Google tag (gtag.js) -->
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+
+    <!-- Google Analytics -->
     <script src="https://www.googletagmanager.com/gtag/js?id=G-J41HGFEHNQ" defer></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -27,17 +28,25 @@
       gtag('config', 'G-J41HGFEHNQ');
     </script>
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <!-- Your Main JavaScript -->
+    <script src="/main.js" defer></script>
   </head>
-  <body>
-    
+
+  <body class="bg-white text-gray-900">
     <!-- Splash Screen -->
-    <div id="splash">
-      <h1 class="counter">0</h1>
-      <div class="overlay">
-        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
-        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    <div id="splash" class="fixed inset-0 bg-white z-50 flex flex-col justify-center items-center">
+      <h1 class="counter text-4xl font-bold mb-6">0</h1>
+      <div class="overlay flex gap-1">
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
+        <div class="bar bg-primary-500 w-2 h-32"></div>
       </div>
     </div>
 
@@ -47,51 +56,63 @@
       <script type="module" src="/src/main.tsx"></script>
     </main>
 
-    <!-- Splash Screen Animation Script -->
+    <!-- Fallback for no-JS -->
+    <noscript>
+      <style>
+        #mainContent { display: block !important; }
+        #splash { display: none !important; }
+      </style>
+    </noscript>
+
+    <!-- Splash Screen Script -->
     <script>
-      function startLoader() {
+      function startLoader(){
         let counter = document.querySelector('.counter');
         let currentValue = 0;
-
-        function updateCounter() {
-          if (currentValue === 100) return;
+        function updateCounter(){
+          if(currentValue === 100) return;
           currentValue += Math.floor(Math.random() * 10) + 1;
-          if (currentValue > 100) currentValue = 100;
+          if(currentValue > 100) currentValue = 100;
           counter.textContent = currentValue;
           let delay = Math.floor(Math.random() * 200) + 50;
           setTimeout(updateCounter, delay);
         }
-
         updateCounter();
       }
 
       window.addEventListener('DOMContentLoaded', () => {
         startLoader();
 
-        gsap.to('.counter', {
+        gsap.to('.counter', 0.25, {
           delay: 3.5,
           opacity: 0,
-          zIndex: -10000,
-          duration: 0.25
+          zIndex: -10000
         });
 
-        gsap.to('.bar', {
+        gsap.to('.bar', 1.5, {
           delay: 3.5,
           height: 0,
           stagger: { amount: 0.5 },
-          ease: 'power4.inOut',
-          duration: 1.5
+          ease: 'power4.inOut'
         });
 
-        gsap.to('#splash', {
-          delay: 5,
-          opacity: 0,
-          duration: 0.5,
-          onComplete: () => {
-            document.getElementById('splash').style.display = 'none';
-            document.getElementById('mainContent').style.display = 'block';
-          }
+        gsap.from('.h1', 1.5, {
+          delay: 4,
+          y: 700,
+          stagger: { amount: 0.5 },
+          ease: 'power4.inOut'
         });
+
+        gsap.from('.hero', 2, {
+          delay: 4.5,
+          y: 400,
+          ease: 'power4.inOut'
+        });
+
+        setTimeout(() => {
+          document.getElementById('splash').style.display = 'none';
+          document.getElementById('mainContent').style.display = 'block';
+        }, 4000);
       });
     </script>
   </body>
