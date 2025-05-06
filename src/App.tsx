@@ -60,6 +60,8 @@ function App() {
           <DoggoBot />
         </Layout>
       )}
-    </DogProvider>
+        </DogProvider>
   );
 }
+
+export default App;
