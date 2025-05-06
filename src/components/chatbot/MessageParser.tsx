@@ -1,11 +1,11 @@
-import { createChatBotMessage } from 'react-chatbot-kit';
-
 interface ActionProvider {
   handleBreedRecommendation: () => void;
   handleAdoptionInfo: () => void;
   handleTrainingInfo: () => void;
   handleHealthInfo: () => void;
   handleDefault: () => void;
+  createChatBotMessage: (text: string) => any;
+  addMessageToBotState: (message: any) => void;
 }
 
 interface MessageParserProps {
@@ -23,7 +23,7 @@ class MessageParser {
   }
 
   parse(message: string) {
-    const lowerCase = message.toLowerCase();
+    const lowerCase = message.toLowerCase().trim();
 
     if (lowerCase.includes('breed') || lowerCase.includes('recommend')) {
       this.actionProvider.handleBreedRecommendation();
@@ -33,6 +33,14 @@ class MessageParser {
       this.actionProvider.handleTrainingInfo();
     } else if (lowerCase.includes('health') || lowerCase.includes('vet')) {
       this.actionProvider.handleHealthInfo();
+    } else if (
+      lowerCase.endsWith('?') ||
+      /^(what|how|when|why|where|who)\b/.test(lowerCase)
+    ) {
+      const message = this.actionProvider.createChatBotMessage(
+        "That's a great question! Let me find the best answer for you 🐾"
+      );
+      this.actionProvider.addMessageToBotState(message);
     } else {
       this.actionProvider.handleDefault();
     }
