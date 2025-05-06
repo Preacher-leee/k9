@@ -62,24 +62,30 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="border-t border-gray-200 mt-6 pt-6 pb-4 px-4 flex flex-col md:flex-row items-center justify-between text-gray-500 text-xs">
         <div className="flex items-center space-x-2 mb-2 md:mb-0">
-          <img src="/public/favicon.svg" alt="K9Kompare" className="h-4" />
+          <img src="/favicon.svg" alt="K9Kompare" className="h-4" />
           <span>© K9Kompare.com | TLee Apps 2025</span>
         </div>
 
         <div className="flex space-x-4 text-lg">
-          <div class="social-icons">
-  <a href="https://www.x.com/k9mpare" class="social-link" aria-label="Twitter">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-    </svg>
-  </a>
-  <a href="https://www.instagram.com/k9mpare" class="social-link" aria-label="Instagram">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-instagram">
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-    </svg>
-  </a>
+          <a
+            href="https://www.x.com/k9mpare"
+            className="text-gray-300 hover:text-black transition-colors"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaXTwitter />
+          </a>
+          <a
+            href="https://www.instagram.com/k9mpare"
+            className="text-gray-300 hover:text-pink-600 transition-colors"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+        </div>
       </div>
     </footer>
   );
