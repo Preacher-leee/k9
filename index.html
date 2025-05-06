@@ -65,13 +65,22 @@
     </div>
     <script src="app.js"></script>
 </body>
-  
+
+  <div id="main-content" style="opacity: 0; transition: opacity 1s ease;">
   <!-- Main App -->
   <main style="display: none;" id="mainContent">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </main>
 
+    <script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('.splash').classList.add('fade-out');
+    }, 3500); // Delay matches animation duration
+  });
+</script>
+    
 <script>
  window.addEventListener('load', () => {
   gsap.fromTo("#logo", 
@@ -94,6 +103,12 @@
     });
   }, 1500);
 });
+</script>
+
+    <script>
+  setTimeout(() => {
+    document.getElementById('main-content').style.opacity = 1;
+  }, 4500); // after splash fade-out
 </script>
 
   <noscript>
