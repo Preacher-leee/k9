@@ -7,11 +7,10 @@ import Layout from './components/layout/Layout';
 
 // Pages
 import Home from './pages/Home';
-import About from './pages/About';
 import Kompare from './pages/Kompare';
 import Facts from './pages/Facts';
 import Newsletter from './pages/Newsletter';
-import Quiz from './pages/Quiz';
+import About from './pages/About';
 import Success from './pages/checkout/Success';
 import Cancel from './pages/checkout/Cancel';
 import NotFound from './pages/NotFound';
@@ -49,21 +48,18 @@ function App() {
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
               <Route path="/kompare" element={<Kompare />} />
               <Route path="/facts" element={<Facts />} />
               <Route path="/newsletter" element={<Newsletter />} />
-              <Route path="/quiz" element={<Quiz />} />
+              <Route path="/about" element={<About />} />
               <Route path="/checkout/success" element={<Success />} />
               <Route path="/checkout/cancel" element={<Cancel />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
-           <DoggoBot />
+          <DoggoBot />
         </Layout>
       )}
     </DogProvider>
   );
 }
-
-export default App;
