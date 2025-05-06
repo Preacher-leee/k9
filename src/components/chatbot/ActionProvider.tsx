@@ -22,27 +22,37 @@ class ActionProvider {
   }
 
   handleBreedRecommendation() {
-    const message = this.createChatBotMessage("Sure! Let's find the best breed for your lifestyle. 🐶");
+    const message = this.createChatBotMessage(
+      "Sure! Let's find the best breed for your lifestyle. 🐶"
+    );
     this.addMessageToBotState(message);
   }
 
   handleAdoptionInfo() {
-    const message = this.createChatBotMessage("There are amazing dogs waiting to be adopted! Check local rescues or visit Petfinder.");
+    const message = this.createChatBotMessage(
+      "There are amazing dogs waiting to be adopted! Check local rescues or visit Petfinder."
+    );
     this.addMessageToBotState(message);
   }
 
   handleTrainingInfo() {
-    const message = this.createChatBotMessage("Training builds bonds! Look into positive reinforcement methods or check out our recommended trainers.");
+    const message = this.createChatBotMessage(
+      "Training builds bonds! Look into positive reinforcement methods or check out our recommended trainers."
+    );
     this.addMessageToBotState(message);
   }
 
   handleHealthInfo() {
-    const message = this.createChatBotMessage("For health-related concerns, always consult a licensed veterinarian. 🩺");
+    const message = this.createChatBotMessage(
+      "For health-related concerns, always consult a licensed veterinarian. 🩺"
+    );
     this.addMessageToBotState(message);
   }
 
   handleDefault() {
-    const message = this.createChatBotMessage("I'm not sure I understand, but I'm learning every day! Try asking about breeds, adoption, or training.");
+    const message = this.createChatBotMessage(
+      "I'm not sure I understand, but I'm learning every day! Try asking about breeds, adoption, or training."
+    );
     this.addMessageToBotState(message);
   }
 }
