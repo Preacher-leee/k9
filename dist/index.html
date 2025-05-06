@@ -1,56 +1,59 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/images/hero.webp" as="image" />
 
-    <!-- Lazy-load all other styles -->
-    <link rel="stylesheet" href="/src/index.css" media="print" onload="this.media='all'" />
+<head>
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/images/hero.webp" as="image" />
 
-    <!-- Defer JS -->
-    <script src="/main.js" defer></script>
+  <!-- Lazy-load all other styles -->
+  <link rel="stylesheet" href="/src/index.css" media="print" onload="this.media='all'" />
 
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Compare dog breeds side by side with K9Kompare. Find the perfect dog breed for your family, lifestyle, and home.">
-    <meta name="monetag" content="475ff98f3061a2eb80e3bb16c4cb75c2">
-    <title>Compare Dog Breeds | Find the Best Match – K9Kompare</title>
-    
-    <!-- Google tag (gtag.js) -->
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-J41HGFEHNQ" defer></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-J41HGFEHNQ');
-    </script>
-  </head>
-  <body>
-    <!-- Splash Screen HTML -->
-    <svg id="svg-sprite" style="display: none;">
-      <symbol id="paw" viewBox="0 0 249 209.32">
-        <ellipse cx="27.917" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
-        <ellipse cx="84.75" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
-        <ellipse cx="162" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
-        <ellipse cx="221.083" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
-        <path stroke-width="0" d="M43.98 165.39s9.76-63.072 76.838-64.574c0 0 71.082-6.758 83.096 70.33 0 0 2.586 19.855-12.54 31.855 0 0-15.75 17.75-43.75-6.25 0 0-7.124-8.374-24.624-7.874 0 0-12.75-.125-21.5 6.625 0 0-16.375 18.376-37.75 12.75 0 0-28.29-7.72-19.77-42.86z"/>
-      </symbol>
+  <!-- Meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compare dog breeds side by side with K9Kompare. Find the perfect dog breed for your family, lifestyle, and home.">
+  <meta name="monetag" content="475ff98f3061a2eb80e3bb16c4cb75c2">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Compare Dog Breeds | Find the Best Match – K9Kompare</title>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+
+  <!-- Google Analytics -->
+  <script src="https://www.googletagmanager.com/gtag/js?id=G-J41HGFEHNQ" defer></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-J41HGFEHNQ');
+  </script>
+  
+  <link rel="stylesheet" href="practice.css">
+  <!-- Splash Screen -->
+  <div class="splash">
+    <svg id="logo" width="230" height="50" viewBox="0 0 230 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 45.26L0 9.47L4.74 9.47L4.74 27.22L22.51 9.47L28.93 9.47L13.92 23.97L29.59 45.26L23.34 45.26L10.60 27.15L4.74 32.86L4.74 45.26L0 45.26Z" stroke="white" stroke-width="0.25"/>
+      <path d="M0 45.26L0 9.47L4.74 9.47L4.74 27.22L22.51 9.47L28.93 9.47L13.92 23.97L29.59 45.26L23.34 45.26L10.60 27.15L4.74 32.86L4.74 45.26L0 45.26ZM32.42 36.99L36.65 36.60Q37.18 39.58 38.70 40.92Q40.21 42.26 42.58 42.26Q44.60 42.26 46.13 41.33Q47.66 40.41 48.63 38.85Q49.61 37.30 50.27 34.67Q50.93 32.03 50.93 29.30Q50.93 29.00 50.90 28.42Q49.58 30.52 47.30 31.82Q45.02 33.13 42.36 33.13Q37.92 33.13 34.84 29.91Q31.76 26.68 31.76 21.41Q31.76 15.97 34.97 12.65Q38.18 9.33 43.02 9.33Q46.51 9.33 49.40 11.21Q52.29 13.09 53.80 16.56Q55.30 20.04 55.30 26.64Q55.30 33.50 53.81 37.56Q52.32 41.63 49.38 43.75Q46.44 45.87 42.48 45.87Q38.28 45.87 35.62 43.54Q32.96 41.21 32.42 36.99M50.42 21.19Q50.42 17.41 48.40 15.19Q46.39 12.96 43.55 12.96Q40.63 12.96 38.45 15.36Q36.28 17.75 36.28 21.56Q36.28 24.98 38.34 27.11Q40.41 29.25 43.43 29.25Q46.48 29.25 48.45 27.11Q50.42 24.98 50.42 21.19Z" stroke="white" stroke-width="0.25"/>
     </svg>
+  </div>
 
-    <div class="ajax-loader">
-      <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-      <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-      <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-      <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-      <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-      <div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
-    </div>
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        // Hide the splash screen after 2.5 seconds (matches fadeOut duration)
+        document.querySelector('.splash').style.display = 'none';
+    });
+  </script>
+</head>
 
-    <main>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </main>
-  </body>
+<body>
+  
+  <!-- Main App -->
+  <main style="display: none;" id="mainContent">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </main>
+</body>
+
 </html>
