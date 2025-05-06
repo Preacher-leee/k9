@@ -15,6 +15,7 @@
   <meta name="description" content="Compare dog breeds side by side with K9Kompare. Find the perfect dog breed for your family, lifestyle, and home.">
   <meta name="monetag" content="475ff98f3061a2eb80e3bb16c4cb75c2">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/index.css" />
   <title>Compare Dog Breeds | Find the Best Match – K9Kompare</title>
 
   <!-- GSAP -->
@@ -31,7 +32,6 @@
 </head>
 
 <body>
-  <link rel="stylesheet" href="index.css">
   <!-- Splash Screen -->
   <div class="splash">
     <svg id="logo" width="230" height="50" viewBox="0 0 230 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,20 +46,38 @@
     <script type="module" src="/src/main.tsx"></script>
   </main>
 
-  <script>
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        gsap.to(".splash", {
-        opacity: 0,
-        duration: 1,
-        onComplete: () => {
-         document.querySelector(".splash").style.display = "none";
-          document.getElementById("mainContent").style.display = "block";
-        }
-      });
-    }, 2500); // Delay before fade out starts (adjust as needed)
-  });
+<script>
+ window.addEventListener('load', () => {
+  gsap.fromTo("#logo", 
+    { opacity: 0, scale: 0.8 }, 
+    { opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" }
+  );
+
+  setTimeout(() => {
+    gsap.to(".splash", {
+      opacity: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      onComplete: () => {
+        document.querySelector(".splash").style.display = "none";
+
+        // Fade in main content
+        gsap.set("#mainContent", { display: "block", opacity: 0 });
+        gsap.to("#mainContent", { opacity: 1, duration: 1, ease: "power2.out" });
+      }
+    });
+  }, 2500);
+});
 </script>
+  <noscript>
+  <style>
+    .splash { display: none; }
+    #mainContent { display: block; }
+  </style>
+  <div style="padding: 1rem; color: red; text-align: center;">
+    Please enable JavaScript to use this site.
+  </div>
+</noscript>
 </body>
 
 </html>
