@@ -37,16 +37,6 @@ const Footer = () => {
               <li><Link to="/resources" className="text-gray-300 hover:text-white transition-colors">Resources</Link></li>
             </ul>
           </div>
-
-          <section>
-          <br>
-            <div className="space-y-5">
-              </div>
-            <div className="mt-4 text-center text-sm text-orange-700">
-          &copy; {currentYear} TLee Apps | K9Kompare.com - All rights reserved
-          </br>
-        </div>
-            </section>
         
         <section>
   <h2>Resources</h2>
@@ -64,14 +54,41 @@ const Footer = () => {
             <Link to="/newsletter" className="btn btn-secondary inline-block">Subscribe Now!</Link>
           </div>
         </div>
+        
+          import React from 'react';
 
-        {/* Policies */}
-        <div className="mt-10 border-t border-gray-700 pt-6 text-sm text-gray-400 text-center">
-          <div className="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-6 mb-4">
-            <a href="https://www.termsfeed.com/live/f7885e6c-d04a-4f66-b6e6-bfd4b5530cec" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="https://www.termsfeed.com/live/f7854bbc-cb72-41dd-b2f3-263b1dd613e5" className="hover:text-white transition-colors">Terms of Use</a>
-            <a href="https://www.termsfeed.com/live/68a4f8b0-9e4c-478c-87f4-ef5e919b45df" className="hover:text-white transition-colors">Cookie Policy</a>
-          </div>
+const Footer = () => {
+  return (
+    <footer className="bg-white border-t border-gray-200 py-4">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+
+        {/* Left: Logo and Copyright */}
+        <div className="flex items-center space-x-2 text-gray-500 text-sm">
+          <img src="/path/to/fiverr-logo.svg" alt="K9Kompare" className="h-5" />
+          <span>© K9 Kompare Ltd. 2025</span>
+        </div>
+
+        {/* Middle: Policy Links */}
+        <div className="flex space-x-4 text-sm text-green-600">
+          <a href="https://www.termsfeed.com/live/f7885e6c-d04a-4f66-b6e6-bfd4b5530cec" className="hover:underline">Privacy Policy</a>
+          <span className="text-gray-300">|</span>
+          <a href="https://www.termsfeed.com/live/68a4f8b0-9e4c-478c-87f4-ef5e919b45df" className="hover:underline">Cookie Policy</a>
+          <span className="text-gray-300">|</span>
+          <a href="https://www.termsfeed.com/live/f7854bbc-cb72-41dd-b2f3-263b1dd613e5" className="hover:underline">Terms of Service</a>
+        </div>
+
+        {/* Right: Social Icons */}
+        <div className="flex space-x-4 text-gray-500">
+          <a href="#"><i className="fab fa-instagram"></i></a>
+        </div>
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
         </div>
      </footer>
   );
