@@ -43,14 +43,6 @@ const About = () => {
             Our mission is to make dog breed research fun, engaging, and accessible to everyone.
           </p>
         </div>
-
-        <button
-  onClick={() => document.body.classList.toggle('high-contrast')}
-  aria-label="Toggle High Contrast Mode"
-  className="mt-4 text-sm underline text-blue-600"
->
-  Toggle High Contrast
-</button>
         
         <div className="max-w-4xl mx-auto">
           <div className="card p-8 md:p-10 mb-12">
