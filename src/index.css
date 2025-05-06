@@ -82,7 +82,7 @@
   align-items: center;
   z-index: 1000;
   opacity: 1;
-  transition: opacity 1s ease;
+  transition: opacity 2.5s ease;
 }
 
 #logo {
