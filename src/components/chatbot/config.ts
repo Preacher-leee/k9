@@ -1,6 +1,6 @@
-import { createChatBotMessage } from "react-chatbot-kit";
-import ActionProvider from "./ActionProvider";
-import MessageParser from "./MessageParser";
+import { createChatBotMessage } from 'react-chatbot-kit';
+import ActionProvider from './ActionProvider';
+import MessageParser from './MessageParser';
 
 const botName = "DoggoBot";
 
@@ -11,16 +11,15 @@ const config = {
   ],
   customStyles: {
     botMessageBox: {
-      backgroundColor: "#4F46E5" // Tailwind indigo-600
+      backgroundColor: "#4F46E5"
     },
     chatButton: {
       backgroundColor: "#4F46E5"
     }
   },
-  customComponents: {},
   state: {},
   actionProvider: ActionProvider,
-  messageParser: MessageParser
+  messageParser: MessageParser,
 };
 
 export default config;
