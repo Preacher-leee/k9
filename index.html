@@ -26,26 +26,73 @@
       gtag('js', new Date());
       gtag('config', 'G-J41HGFEHNQ');
     </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
   </head>
   <body>
-    <!-- Splash Screen HTML -->
-    <h1 class="counter">0</h1>
-    <div class="overlay">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    
+    <!-- Splash Screen -->
+    <div id="splash">
+      <h1 class="counter">0</h1>
+      <div class="overlay">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
     </div>
 
-    <main>
+    <!-- Main App -->
+    <main style="display: none;" id="mainContent">
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
     </main>
+
+    <!-- Splash Screen Animation Script -->
+    <script>
+      function startLoader() {
+        let counter = document.querySelector('.counter');
+        let currentValue = 0;
+
+        function updateCounter() {
+          if (currentValue === 100) return;
+          currentValue += Math.floor(Math.random() * 10) + 1;
+          if (currentValue > 100) currentValue = 100;
+          counter.textContent = currentValue;
+          let delay = Math.floor(Math.random() * 200) + 50;
+          setTimeout(updateCounter, delay);
+        }
+
+        updateCounter();
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        startLoader();
+
+        gsap.to('.counter', {
+          delay: 3.5,
+          opacity: 0,
+          zIndex: -10000,
+          duration: 0.25
+        });
+
+        gsap.to('.bar', {
+          delay: 3.5,
+          height: 0,
+          stagger: { amount: 0.5 },
+          ease: 'power4.inOut',
+          duration: 1.5
+        });
+
+        gsap.to('#splash', {
+          delay: 5,
+          opacity: 0,
+          duration: 0.5,
+          onComplete: () => {
+            document.getElementById('splash').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
