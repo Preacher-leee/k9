@@ -1,29 +1,19 @@
-import { createChatBotMessage } from 'react-chatbot-kit';
-
-interface ActionProviderProps {
-  createChatBotMessage: typeof createChatBotMessage;
-  setState: React.Dispatch<React.SetStateAction<any>>;
-}
-
 class ActionProvider {
-  createChatBotMessage: typeof createChatBotMessage;
-  setState: React.Dispatch<React.SetStateAction<any>>;
-
-  constructor({ createChatBotMessage, setState }: ActionProviderProps) {
+  constructor(createChatBotMessage, setStateFunc) {
     this.createChatBotMessage = createChatBotMessage;
-    this.setState = setState;
+    this.setState = setStateFunc;
   }
 
-  addMessageToState = (message: any) => {
-    this.setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, message],
+  addMessageToState = (message) => {
+    this.setState((prevState) => ({
+      ...prevState,
+      messages: [...prevState.messages, message],
     }));
   };
 
   handleBreedRecommendation = () => {
     const message = this.createChatBotMessage(
-      "I can help you find the perfect breed! Let me ask you a few questions about your lifestyle. How active are you on a scale of 1-5?",
+      "I can help you find the perfect breed! How active are you on a scale of 1–5?",
       { widget: "activityLevel" }
     );
     this.addMessageToState(message);
@@ -31,7 +21,7 @@ class ActionProvider {
 
   handleAdoptionInfo = () => {
     const message = this.createChatBotMessage(
-      "That's great that you're considering adoption! Would you like me to help you find local shelters or learn more about the adoption process?",
+      "Thinking of adoption? I can help find local shelters or explain the process.",
       { widget: "adoptionOptions" }
     );
     this.addMessageToState(message);
@@ -39,7 +29,7 @@ class ActionProvider {
 
   handleTrainingInfo = () => {
     const message = this.createChatBotMessage(
-      "Training is essential for a happy dog! Would you like specific tips for a breed?",
+      "Training helps dogs thrive! Want tips for obedience, crate, or breed-specific training?",
       { widget: "trainingOptions" }
     );
     this.addMessageToState(message);
@@ -47,7 +37,7 @@ class ActionProvider {
 
   handleHealthInfo = () => {
     const message = this.createChatBotMessage(
-      "Health matters! Would you like advice on preventive care, diet, or specific symptoms?",
+      "Health is key! Ask about vaccines, diet, vet care, or symptoms to watch.",
       { widget: "healthOptions" }
     );
     this.addMessageToState(message);
@@ -55,7 +45,7 @@ class ActionProvider {
 
   handleDefault = () => {
     const message = this.createChatBotMessage(
-      "I'm not sure I understand. Would you like help with breeds, adoption, training, or health?",
+      "I didn't quite get that. You can ask about breeds, adoption, training, or health!",
       { widget: "defaultOptions" }
     );
     this.addMessageToState(message);
