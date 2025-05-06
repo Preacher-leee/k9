@@ -42,21 +42,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 4 */}
-        <div>
-          <h3 className="font-semibold mb-4">Trade Associations</h3>
-          <ul className="space-y-2">
-            <li>Association of Professional Dog Trainers <a href="https://apdt.com/">(APDT)</a></li>
-            <li>Australian Association of Professional Dog Trainers <a href="https://aapdt.org/">(AAPDT)</a></li>
-            <li>Canadian Association of Professional Pet Dog Trainers <a href="https://capdt.ca/">(CAPPDT)</a></li>
-            <li>Certified Applied Animal Behaviorists <a href="#">(CAAB)</a></li>
-            <li>International Association of Canine Training Professionals <a href="https://iacpdogs.org/">(IACP)</a></li>
-            <li>National Association of Dog Obedience Instructors <a href="https://nadoi.org/">(NADOI)</a></li>
-            <li>New Zealand Association of Professional Dog Trainers <a href="https://www.apdtnz.org.nz/">(NZAPDT)</a></li>
-            <li>Pet Professionals Guild <a href="https://www.petprofessionalguild.com/">(PPG)</a></li>
-          </ul>
-        </div>
-
       </div>
 
       {/* Bottom Section */}
@@ -65,8 +50,6 @@ const Footer = () => {
           <img src="/favicon.svg" alt="K9Kompare" className="h-4" />
           <span>© K9Kompare.com | TLee Apps 2025</span>
         </div>
-
-        <div className="flex space-x-4 text-lg">
           <a
             href="https://www.x.com/k9mpare"
             className="text-gray-300 hover:text-black transition-colors"
