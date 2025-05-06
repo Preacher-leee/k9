@@ -49,18 +49,21 @@ function App() {
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
               <Route path="/kompare" element={<Kompare />} />
               <Route path="/facts" element={<Facts />} />
               <Route path="/newsletter" element={<Newsletter />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/quiz" element={<Quiz />} />
               <Route path="/checkout/success" element={<Success />} />
               <Route path="/checkout/cancel" element={<Cancel />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
-          <DoggoBot />
+           <DoggoBot />
         </Layout>
       )}
     </DogProvider>
   );
 }
+
+export default App;
