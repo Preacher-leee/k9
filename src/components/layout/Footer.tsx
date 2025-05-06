@@ -74,7 +74,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaXTwitter />
+            <FaTwitter />
           </a>
           <a
             href="https://www.instagram.com/k9mpare"
