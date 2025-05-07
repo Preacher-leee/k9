@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import './components/PawLoader.css';
 import PawLoader from './components/PawLoader';
 
 // Layouts
@@ -27,20 +28,19 @@ function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
 
-  useEffect(() => {
+ useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4500);
+      setLoading(false)
+      document.getElementById('splash-screen').classList.add('hide');
+    }, 4000);
     return () => clearTimeout(timer);
   }, []);
-
-  if (loading) {
-    return <PawLoader />;
-  }
-
-  return (
+  
+   return (
     <DogProvider>
       <Layout>
+         {/* PawLoader is shown until the loading is complete */}
+        {loading && <PawLoader />}
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
