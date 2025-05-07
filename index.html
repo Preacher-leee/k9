@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -46,7 +47,6 @@
 <body>
     <div class="splash">
 
-       <title>K9MPARE</title>
         <svg id="logo" width="230" height="50" viewBox="0 0 230 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 45.26L0 9.47L4.74 9.47L4.74 27.22L22.51 9.47L28.93 9.47L13.92 23.97L29.59 45.26L23.34 45.26L10.60 27.15L4.74 32.86L4.74 45.26L0 45.26Z" 
             stroke="white" stroke-width="0.25"/>
@@ -66,18 +66,27 @@
     </div>
     <script src="app.js"></script>
 </body>
-  
+
+  <div id="main-content" style="opacity: 0; transition: opacity 1s ease;">
   <!-- Main App -->
   <main style="display: none;" id="mainContent">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </main>
 
+    <script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('.splash').classList.add('fade-out');
+    }, 3500); // Delay matches animation duration
+  });
+</script>
+    
 <script>
  window.addEventListener('load', () => {
   gsap.fromTo("#logo", 
     { opacity: 0, scale: 0.8 }, 
-    { opacity: 1, scale: 1, duration: 1.2, ease: "power2.out" }
+    { opacity: 1, scale: 1, duration: 2.5s, ease: "power2.out" }
   );
 
   setTimeout(() => {
@@ -90,11 +99,17 @@
 
         // Fade in main content
         gsap.set("#mainContent", { display: "block", opacity: 0 });
-        gsap.to("#mainContent", { opacity: 1, duration: 1, ease: "power2.out" });
+        gsap.to("#mainContent", { opacity: 1, duration: 2, ease: "power2.out" });
       }
     });
-  }, 1500);
+  }, 2500);
 });
+</script>
+
+    <script>
+  setTimeout(() => {
+    document.getElementById('main-content').style.opacity = 1;
+  }, 2500); // after splash fade-out
 </script>
 
   <noscript>
