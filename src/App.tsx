@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import PawLoader from './components/PawLoader';
 
-
 // Layouts
 import Layout from './components/layout/Layout';
 
