@@ -65,6 +65,7 @@
     </div>
     <script src="app.js"></script>
 </body>
+  
 
   <div id="main-content" style="opacity: 0; transition: opacity 1s ease;">
   <!-- Main App -->
@@ -77,7 +78,7 @@
   window.addEventListener('load', () => {
     setTimeout(() => {
       document.querySelector('.splash').classList.add('fade-out');
-    }, 3500); // Delay matches animation duration
+    }, 2500); // Delay matches animation duration
   });
 </script>
     
@@ -108,13 +109,13 @@
     <script>
   setTimeout(() => {
     document.getElementById('main-content').style.opacity = 1;
-  }, 4500); // after splash fade-out
+  }, 2500); // after splash fade-out
 </script>
 
   <noscript>
   <link rel="stylesheet" href="/src/index.css" />
 </noscript>
-  
+
   <noscript>
   <style>
     .splash { display: none; }
@@ -124,7 +125,7 @@
     Please enable JavaScript to use this site.
   </div>
 </noscript>
-  
+
 </body>
 
 </html>
