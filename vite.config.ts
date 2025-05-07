@@ -8,9 +8,4 @@ export default defineConfig({
       timeout: 5000,
     },
   },
-  build: {
-    rollupOptions: {
-      external: ['gsap'],
-    },
-  },
 });
