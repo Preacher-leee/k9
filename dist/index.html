@@ -67,8 +67,6 @@
 
   <!-- Main App -->
   <main>
-  <div id="main-content" class="hidden">
-  <main style="display: none;" id="mainContent">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </main>
@@ -77,20 +75,20 @@
   window.addEventListener('load', () => {
     setTimeout(() => {
       document.querySelector('.splash').classList.add('fade-out');
-    }, 3000); // Delay matches animation duration
+    }, 3000);
   });
 </script>
     
     <script>
   setTimeout(() => {
-    document.getElementById('main-content').style.opacity = 1;
+    document.getElementById('main').style.opacity = 1;
   }, 3000); // after splash fade-out
 </script>
 
     <script>
   window.addEventListener('load', () => {
     document.querySelector('.splash').style.display = 'none';
-    document.querySelector('#main-content')?.classList.remove('hidden');
+    document.querySelector('#main')?.classList.remove('hidden');
   });
 </script>
 
