@@ -1,18 +1,72 @@
 import React from 'react';
-import './PawLoader.css'; // Move the CSS into this file
+import './PawLoader.css';
 
 const PawLoader = () => {
   return (
     <div className="paw-loader">
-      {[...Array(8)].map((_, i) => (
-        <div className={`paw-print-${i + 1}`} key={i}>
-          <div className="pad large"></div>
-          <div className="pad small-1"></div>
-          <div className="pad small-2"></div>
-          <div className="pad small-3"></div>
-          <div className="pad small-4"></div>
-        </div>
-      ))}
+<div class="paw-print-1">
+    <div class="pad large"></div>
+    <div class="pad small-1"></div>
+    <div class="pad small-2"></div>
+    <div class="pad small-3"></div>
+    <div class="pad small-4"></div>
+</div>
+    
+<div class="paw-print-2">
+    <div class="pad large"></div>
+    <div class="pad small-1"></div>
+    <div class="pad small-2"></div>
+    <div class="pad small-3"></div>
+    <div class="pad small-4"></div>
+</div>    
+    
+<div class="paw-print-3">
+    <div class="pad large"></div>
+    <div class="pad small-1"></div>
+    <div class="pad small-2"></div>
+    <div class="pad small-3"></div>
+    <div class="pad small-4"></div>
+</div>    
+    
+<div class="paw-print-4">
+    <div class="pad large"></div>
+    <div class="pad small-1"></div>
+    <div class="pad small-2"></div>
+    <div class="pad small-3"></div>
+    <div class="pad small-4"></div>
+</div>
+    
+<div class="paw-print-5">
+    <div class="pad large"></div>
+    <div class="pad small-1"></div>
+    <div class="pad small-2"></div>
+    <div class="pad small-3"></div>
+    <div class="pad small-4"></div>
+</div>
+    
+<div class="paw-print-6">
+    <div class="pad large"></div>
+    <div class="pad small-1"></div>
+    <div class="pad small-2"></div>
+    <div class="pad small-3"></div>
+    <div class="pad small-4"></div>
+</div>
+    
+<div class="paw-print-7">
+    <div class="pad large"></div>
+    <div class="pad small-1"></div>
+    <div class="pad small-2"></div>
+    <div class="pad small-3"></div>
+    <div class="pad small-4"></div>
+</div>
+
+<div class="paw-print-8">
+    <div class="pad large"></div>
+    <div class="pad small-1"></div>
+    <div class="pad small-2"></div>
+    <div class="pad small-3"></div>
+    <div class="pad small-4"></div>
+ </div>
     </div>
   );
 };
