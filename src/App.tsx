@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import PawLoader from './PawLoader';
 
 // Layouts
 import Layout from './components/layout/Layout';
@@ -22,9 +23,20 @@ import DoggoBot from './components/chatbot/DoggoBot';
 import { DogProvider } from './context/DogContext';
 
 function App() {
-  const [isSplashVisible, setIsSplashVisible] = useState(true);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 4500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <PawLoader />;
+  }
+  
   return (
     <DogProvider>
       <Layout>
