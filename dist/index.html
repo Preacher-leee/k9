@@ -9,6 +9,8 @@
   <!-- Lazy-load all other styles -->
   <link rel="stylesheet" href="/src/index.css" media="print" onload="this.media='all'" />
 
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any">
+
   <!-- Meta tags -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,9 +19,6 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
   <title>Compare Dog Breeds | Find the Best Match – K9Kompare</title>
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
 
   <link rel="canonical" href="https://www.k9kompare.com/" />
 
@@ -64,10 +63,9 @@
             </svg>      
     </div>
     <script src="app.js"></script>
-</body>
 
-  <div id="main-content" style="opacity: 0; transition: opacity 1s ease;">
   <!-- Main App -->
+  <div id="main-content" style="opacity: 0; transition: opacity 1s ease;">
   <main style="display: none;" id="mainContent">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
@@ -81,35 +79,13 @@
   });
 </script>
     
-<script>
- window.addEventListener('load', () => {
-  gsap.fromTo("#logo", 
-    { opacity: 0, scale: 0.8 }, 
-    { opacity: 1, scale: 1, duration: 2.5s, ease: "power2.out" }
-  );
-
-  setTimeout(() => {
-    gsap.to(".splash", {
-      opacity: 0,
-      duration: 1,
-      ease: "power2.inOut",
-      onComplete: () => {
-        document.querySelector(".splash").style.display = "none";
-
-        // Fade in main content
-        gsap.set("#mainContent", { display: "block", opacity: 0 });
-        gsap.to("#mainContent", { opacity: 1, duration: 2, ease: "power2.out" });
-      }
-    });
-  }, 1500);
-});
-</script>
-
     <script>
   setTimeout(() => {
     document.getElementById('main-content').style.opacity = 1;
-  }, 4500); // after splash fade-out
+  }, 3500); // after splash fade-out
 </script>
+
+    <noscript><link rel="stylesheet" href="/src/index.css" /></noscript>
 
   <noscript>
   <link rel="stylesheet" href="/src/index.css" />
