@@ -75,3 +75,5 @@ export class ActionProvider {
     this.addMessageToState(message);
   };
 }
+
+export default ActionProvider;
