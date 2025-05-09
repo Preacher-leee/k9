@@ -1,4 +1,4 @@
-import { StrictMode, useEffect } from 'react';
+    import { StrictMode, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
@@ -6,7 +6,7 @@ import './index.css';
 
 // Hide the splash screen after the app has loaded
 window.addEventListener('load', () => {
-  const splashScreen = document.querySelector('.splash') as HTMLElement;
+  const splashScreen = document.querySelector('.ajax-loader') as HTMLElement;
   if (splashScreen) {
     setTimeout(() => {
       splashScreen.style.display = 'none';
