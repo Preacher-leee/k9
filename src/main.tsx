@@ -6,7 +6,7 @@ import './index.css';
 
 // Hide the splash screen after the app has loaded
 window.addEventListener('load', () => {
-  const splashScreen = document.querySelector('.ajax-loader') as HTMLElement;
+  const splashScreen = document.querySelector('.splash') as HTMLElement;
   if (splashScreen) {
     setTimeout(() => {
       splashScreen.style.display = 'none';
