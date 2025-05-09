@@ -28,15 +28,23 @@ function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
 
- useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-      document.body.style.overflow = 'auto';
-      const splash = document.getElementById('splash-screen');
-      if (splash) splash.classList.add('hide');
-    }, 4000);
-    return () => clearTimeout(timer);
-  }, []);
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false);
+
+    // Allow scrolling again
+    document.documentElement.classList.add('scrollable');
+    document.body.classList.add('scrollable');
+
+    // Show main content
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+      mainContent.classList.add('show');
+    }
+  }, 3000);
+
+  return () => clearTimeout(timer);
+}, []);
   
    return (
     <DogProvider>
