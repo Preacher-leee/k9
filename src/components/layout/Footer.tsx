@@ -10,12 +10,11 @@ const Footer = () => {
         <nav aria-label="Pages">
           <h3 className="font-semibold mb-4">Pages</h3>
           <ul className="space-y-2">
-             <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/kompare" className="text-gray-300 hover:text-white transition-colors">Kompare Breeds</Link></li>
-              <li><Link to="/facts" className="text-gray-300 hover:text-white transition-colors">Fun Dog Facts</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/quiz" className="text-gray-300 hover:text-white transition-colors">Quiz</Link></li>
-              <li><Link to="/more-projects" className="text-gray-300 hover:text-white transition-colors">More Projects</Link></li>
+            <li><a href="https://k9kompare.com/" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li><a href="https://k9kompare.com/about" target="_blank" rel="noopener noreferrer">About</a></li>
+            <li><a href="https://k9kompare.com/kompare" target="_blank" rel="noopener noreferrer">Kompare</a></li>
+            <li><a href="https://k9kompare.com/facts" target="_blank" rel="noopener noreferrer">Fun Dog Facts</a></li>
+            <li><a href="https://k9kompare.com/quiz" target="_blank" rel="noopener noreferrer">Quiz</a></li>
           </ul>
         </nav>
 
