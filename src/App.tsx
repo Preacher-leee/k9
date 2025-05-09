@@ -31,7 +31,9 @@ function App() {
  useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-      document.getElementById('splash-screen').classList.add('hide');
+      document.body.style.overflow = 'auto';
+      const splash = document.getElementById('splash-screen');
+      if (splash) splash.classList.add('hide');
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
