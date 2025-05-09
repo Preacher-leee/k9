@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import './components/PawLoader.css';
+import PawLoader from './components/PawLoader';
 
 // Layouts
 import Layout from './components/layout/Layout';
@@ -10,61 +12,43 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Kompare from './pages/Kompare';
 import Facts from './pages/Facts';
+import Newsletter from './pages/Newsletter';
 import Quiz from './pages/Quiz';
-import MoreProjects from './pages/MoreProjects'
 import Success from './pages/checkout/Success';
 import Cancel from './pages/checkout/Cancel';
 import NotFound from './pages/NotFound';
 
 // Components
 import DoggoBot from './components/chatbot/DoggoBot';
-import { SplashScreen } from './components/animations/SplashScreen';
-import { LoadingScreen } from './components/animations/LoadingScreen';
 
 // Context
 import { DogProvider } from './context/DogContext';
 
-export function App() {
+function App() {
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
-  const [showSplash, setShowSplash] = useState(true);
-  const [showLoading, setShowLoading] = useState(false);
-  const [showContent, setShowContent] = useState(false);
 
-  useEffect(() => {
-    // Handle animation sequence
-    if (!showSplash && !showLoading && !showContent) {
-      setShowLoading(true);
-    }
-  }, [showSplash, showLoading, showContent]);
-
-  const handleSplashComplete = () => {
-    setShowSplash(false);
-  };
-
-  const handleLoadingComplete = () => {
-    setShowLoading(false);
-    setShowContent(true);
-  };
-
-  if (showSplash) {
-    return <SplashScreen onComplete={handleSplashComplete} />;
-  }
-
-  if (showLoading) {
-    return <LoadingScreen onComplete={handleLoadingComplete} />;
-  }
+ useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+      document.getElementById('splash-screen').classList.add('hide');
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
   
    return (
     <DogProvider>
       <Layout>
+         {/* PawLoader is shown until the loading is complete */}
+        {loading && <PawLoader />}
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/kompare" element={<Kompare />} />
             <Route path="/facts" element={<Facts />} />
+            <Route path="/newsletter" element={<Newsletter />} />
             <Route path="/quiz" element={<Quiz />} />
-            <Route path="/more-projects" element={<MoreProjects />} />
             <Route path="/checkout/success" element={<Success />} />
             <Route path="/checkout/cancel" element={<Cancel />} />
             <Route path="*" element={<NotFound />} />
