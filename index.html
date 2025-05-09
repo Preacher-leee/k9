@@ -117,14 +117,6 @@
             </svg>
     </div>
   
-  <!-- Main Content (Hidden at first) -->
-
-  <div id="main-content" style="opacity: 0; transition: opacity 1s ease;">
-  <!-- Main App -->
-  <main style="display: none;" id="mainContent">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </main>
 
     <script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -201,7 +193,13 @@
   });
 </script>
     
+    <div id="main-content" style="opacity: 0; transition: opacity 1s ease;">
+  <!-- Main App -->
+  <main style="display: none;" id="mainContent">
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </main>
+
 
 
 </body>
