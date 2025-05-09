@@ -37,3 +37,5 @@ export class MessageParser {
     this.actionProvider.handleDefault();
   }
 }
+
+export default MessageParser;
