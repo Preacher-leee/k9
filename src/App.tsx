@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import './components/PawLoader.css';
-import PawLoader from './components/PawLoader';
 
 // Layouts
 import Layout from './components/layout/Layout';
