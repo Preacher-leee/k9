@@ -22,7 +22,6 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
       font-family: 'Montserrat', sans-serif;
     }
 
@@ -140,8 +139,8 @@
           main.style.opacity = 1;
           document.body.style.overflow = "auto";
           document.documentElement.style.overflow = "auto";
-        }, 1000); // matches the transition duration in .fade-out
-      }, 3200); // give all paths time to animate
+        }, 1500); // matches the transition duration in .fade-out
+      }, 1500); // give all paths time to animate
     });
   </script>
     
@@ -172,7 +171,7 @@
     <script>
   setTimeout(() => {
     document.getElementById('main-content').style.opacity = 1;
-  }, 2500); // after splash fade-out
+  }, 1500); // after splash fade-out
 </script>
 
   <noscript>
@@ -201,6 +200,9 @@
     }, 2000); // matches your last animation-delay (1.5s) + safety
   });
 </script>
+    
+    <div id="root"></div>
+
 
 </body>
 
